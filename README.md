@@ -5,10 +5,6 @@ Feel free to play around with the existing code and please leave any feedback fo
 
 ## Available Scripts
 
-Install the SDK and other dependencies with 
-
-`npm install`
-
 In the project directory, you can run:
 
 `npm start`
@@ -31,30 +27,30 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Getting Started FAQ
 
-### Working with the demo
+### Installing the demo
 
 1. Clone this repo
-
-```
-git@github.com:HeyGen-Official/StreamingAvatarTSDemo.git
-```
-
-2. Replace `API_KEY` with your api key
+2. Replace `ACCESS_TOKEN` with your access token
 
 ```
   const avatar = useRef(new StreamingAvatarApi(
-      new Configuration({apiKey: 'API_KEY'})
+      new Configuration({apiKey: 'ACCESS_TOKEN'})
     ));
 
 ```
 
-### How do I get an API Key?
+### How do I get an Access token Key?
 
-Either an an API Key or Trial Token from HeyGen is required to run this Streaming API demo. API Keys are reserved for Enterprise customers, whereas both Creator and Teams plan users can activate and use a Trial token. You can retrieve either the API Key or Trial Token by logging in to HeyGen and navigating to this page in your settings: https://app.heygen.com/settings?nav=API
+To generate your access token you must first have access to your API key. API Keys are reserved for Enterprise customers. You can retrieve either the API Key or Trial Token by logging in to HeyGen and navigating to this page in your settings: https://app.heygen.com/settings?nav=API. Afterwards you can run the following to obtain your access token.
+
+```
+curl https://api.heygen.com/v1/streaming.create_token -H "x-api-key: <api-key>" -H "content-type: application/json" -d {}
+{"error": null, "data": {"token": "<token>"}}
+```
 
 ### Which Avatars can I use with this project?
 
-By default, there are several Public Avatars that can be used in Streaming. (AKA Streaming Avatars.) You can find the Avatar IDs for these Public Avatars by navigating to app.heygen.com/streaming-avatar and clicking 'Select Avatar'.
+By default, there are several Public Avatars that can be used in Streaming. (AKA Streaming Avatars.) You can find the Avatar IDs for these Public Avatars by navigating to [app.heygen.com/streaming-avatar](https://app.heygen.com/streaming-avatar) and clicking 'Select Avatar' and copying the avatar id.
 
 In order to use a private Avatar created under your own account in Streaming, it must be upgraded to be a Streaming Avatar. Only 1. Finetune Instant Avatars and 2. Studio Avatars are able to be upgraded to Streaming Avatars. This upgrade is a one-time fee and can be purchased by navigating to app.heygen.com/streaming-avatar and clicking 'Select Avatar'.
 

@@ -9,7 +9,7 @@ function App() {
   const [stream, setStream] = useState<MediaStream> ();
   const [debug, setDebug] = useState<string> ();
   const avatar = useRef(new StreamingAvatarApi(
-      new Configuration({apiKey: 'API_KEY'})
+      new Configuration({accessToken: 'ACCESS_TOKEN'})
     ));
 
   const [text, setText] = useState<string>("");
@@ -50,7 +50,9 @@ function App() {
   }, [mediaStream, stream])
 
   async function handleSpeak(){
-    await avatar.current.speak({taskRequest: {text: text, sessionId: data?.sessionId}});
+    await avatar.current.speak({taskRequest: {text: text, sessionId: data?.sessionId}}).catch((e) => {
+      setDebug(e.message);
+    });
   }
   
   return (

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@heygen/streaming-avatar": "^1.0.0",
+    "@heygen/streaming-avatar": "^1.0.4",
     "@types/node": "^16.18.96",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
