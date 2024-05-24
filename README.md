@@ -44,8 +44,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 To generate your access token you must first have access to your API key. API Keys are reserved for Enterprise customers. You can retrieve either the API Key or Trial Token by logging in to HeyGen and navigating to this page in your settings: https://app.heygen.com/settings?nav=API. Afterwards you can run the following to obtain your access token.
 
 ```
-curl https://api.heygen.com/v1/streaming.create_token -H "x-api-key: <api-key>" -H "content-type: application/json" -d {}
-{"error": null, "data": {"token": "<token>"}}
+curl -X POST https://api.heygen.com/v1/streaming.create_token -H "x-api-key: <api-key>"
 ```
 
 ### Which Avatars can I use with this project?
