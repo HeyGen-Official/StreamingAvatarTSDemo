@@ -4,7 +4,7 @@ import './App.css';
 import OpenAI from 'openai';
 
 //Enter your OpenAI key here
-const openaiApiKey = "sk-proj-Pr3rMZ3muLNOEHi4iRg5T3BlbkFJnzL0ax8m8rb8mmnoBbqQ"
+const openaiApiKey = ""
 
 // Set up OpenAI w/ API Key
 const openai = new OpenAI({
