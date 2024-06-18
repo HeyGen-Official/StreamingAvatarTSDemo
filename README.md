@@ -64,15 +64,7 @@ To add your Open AI API Key, go to the 'Client' folder, open 'App.tsx', and put 
 
 ### How does the integration with OpenAI / ChatGPT work?
 
-In this demo, we are calling the Chat Completions API from OpenAI in order to come up with some response to user input. You can see the relevant code in client/app.tsx:
-
-```
-const response = await openai.chat.completions.create({ 
-        model: "gpt-4o",
-        messages: [{ role: "system", content: "You speak Spanish" },
-                   { role: "user", content: chatGPTText }],
-      });
-```
+In this demo, we are calling the Chat Completions API from OpenAI in order to come up with some response to user input. You can see the relevant code in client/app.tsx.
 
 You can see that there are two 'messages' sent here in the call to the gpt-4o model. One has the Role parameter set to 'system', and the the other is a message with the role 'user'. 
 
