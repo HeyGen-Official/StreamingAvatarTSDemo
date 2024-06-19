@@ -1,3 +1,6 @@
+/**
+ * Very basic react demo of how to use the HeyGen Streaming Avatar SDK
+ */
 import { useEffect, useRef, useState } from 'react';
 import { Configuration, NewSessionData, StreamingAvatarApi } from '@heygen/streaming-avatar';
 import './App.css';
