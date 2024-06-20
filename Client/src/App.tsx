@@ -73,6 +73,19 @@ function App() {
     avatar.current = new StreamingAvatarApi(
       new Configuration({ accessToken: newToken })
     );
+
+    const startTalkCallback = (e: any) => {
+      console.log("Avatar started talking", e);
+    };
+
+    const stopTalkCallback = (e: any) => {
+      console.log("Avatar stopped talking", e);
+    };
+
+    console.log('Adding event handlers:', avatar.current);
+    avatar.current.addEventHandler("avatar_start_talking", startTalkCallback);
+    avatar.current.addEventHandler("avatar_stop_talking", stopTalkCallback);
+
     setInitialized(true);
   }
 
