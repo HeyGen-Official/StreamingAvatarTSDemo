@@ -3,38 +3,21 @@
 This is a sample project and was bootstrapped using [Create React App](https://github.com/facebook/create-react-app)
 Feel free to play around with the existing code and please leave any feedback for the SDK [here](https://github.com/HeyGen-Official/StreamingAvatarSDK/discussions).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-`npm start`
-
-Runs the app and the server in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-`npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ## Getting Started FAQ
 
-### Installing the demo
+### Setting up the demo
 
 1. Clone this repo
-2. Navigate to the containing folder in your terminal
-3. Run 'npm install' (assuming you have npm installed. If not, please follow these instructions: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)
-4. Go to the 'Server' folder, and enter your HeyGen Enterprise API Token or Trial Token in the '.env' file. This will allow the Client app to generate secure Access Tokens with which to create streaming sessions.
 
-You can retrieve either the API Key or Trial Token by logging in to HeyGen and navigating to this page in your settings: [https://app.heygen.com/settings?nav=API]. 
+2. Navigate to the containing folder in your terminal
+
+3. Run `npm install` (assuming you have npm installed. If not, please follow these instructions: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/)
+
+4. Go to the 'Server' folder, and enter your HeyGen Enterprise API Token or Trial Token in the `.env` file. Replace `PLACEHOLDER-API-KEY` with your API key. This will allow the Client app to generate secure Access Tokens with which to create streaming sessions.
+
+    You can retrieve either the API Key or Trial Token by logging in to HeyGen and navigating to this page in your settings: [https://app.heygen.com/settings?nav=API]. NOTE: use the trial token if you don't have an enterprise API token yet.
+
+5. Run `npm start`
 
 ### Difference between Trial Token and Enterprise API Token
 
@@ -45,6 +28,8 @@ Each Trial Token is limited to 3 concurrent streaming sessions. However, every s
 If you do not 'close' the streaming sessions and try to open more than 3, you will encounter errors including stuttering and freezing of the Streaming Avatar. Please endeavor to only have 3 sessions open at any time while you are testing the Streaming Avatar API with your Trial Token.
 
 ### Starting sessions
+
+NOTE: Make sure you have enter your token into the `.env` file and run `npm start`.
 
 To start your 'session' with a Streaming Avatar, first click the 'start' button. If your HeyGen API key is entered into the Server's .env file, then you should see our demo Streaming Avatar (Monica!) appear. 
 
