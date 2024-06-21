@@ -63,11 +63,15 @@ By default, there are several Public Avatars that can be used in Streaming. (AKA
 
 In order to use a private Avatar created under your own account in Streaming, it must be upgraded to be a Streaming Avatar. Only 1. Finetune Instant Avatars and 2. Studio Avatars are able to be upgraded to Streaming Avatars. This upgrade is a one-time fee and can be purchased by navigating to [app.heygen.com/streaming-avatar] and clicking 'Select Avatar'.
 
-Photo Avatars are not compatible with Streaming and cannot be used.
+Please note that Photo Avatars are not compatible with Streaming and cannot be used.
 
 ### Which voices can I use with my Streaming Avatar?
 
 Most of HeyGen's AI Voices can be used with the Streaming API. To find the Voice IDs that you can use, please use the List Voices v2 endpoint from HeyGen: [https://docs.heygen.com/reference/list-voices-v2]
+
+Please note that for voices that support Emotions, such as Christine and Tarquin, you need to pass in the Emotion string in the Voice Setting parameter: [https://docs.heygen.com/reference/new-session-copy#voicesetting]
+
+You can also set the speed at which the Streaming Avatar speaks by passing in a Rate in the Voice Setting.
 
 ### Where can I read more about enterprise-level usage of the Streaming API?
 
