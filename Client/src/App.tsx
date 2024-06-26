@@ -144,7 +144,7 @@ function App() {
       const newToken = await fetchAccessToken();
       console.log('Initializing with Access Token:', newToken); // Log token for debugging
       avatar.current = new StreamingAvatarApi(
-        new Configuration({ accessToken: newToken })
+        new Configuration({ accessToken: newToken, jitterBuffer: 200 })
       );
       setInitialized(true); // Set initialized to true
     };
