@@ -33,9 +33,10 @@
 }
 
 .MediaPlayer{
-  width: 80%;
-  height: 100%;
-  background-color: black;
+  display: flex;
+  width: 800px;
+  height: 300px;
+  justify-content: space-between;
   margin-top: 50px;
 }
 
