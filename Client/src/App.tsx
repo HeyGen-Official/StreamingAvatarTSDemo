@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import {useEffect, useRef, useState} from 'react';
 import { Configuration, NewSessionData, StreamingAvatarApi } from '@heygen/streaming-avatar';
 import './App.css';
 import OpenAI from 'openai';
+import {CanvasRender} from "./components/canvas-render";
 
 //Enter your OpenAI key here
 const openaiApiKey = ""
@@ -27,6 +28,8 @@ function App() {
   const avatar = useRef<StreamingAvatarApi | null>(null);
   const mediaRecorder = useRef<MediaRecorder | null>(null);
   const audioChunks = useRef<Blob[]>([]);
+
+  const [canPlay, setCanPlay] = useState(false)
 
   async function fetchAccessToken() {
     try {
@@ -223,8 +226,8 @@ function App() {
         </div>
         <div className="Actions">
           <input className="InputField" placeholder='Type something for the avatar to say' value={text} onChange={(v) => setText(v.target.value)} />
-          <button onClick={handleSpeak}>Speak</button>
           <button onClick={grab}>Start</button>
+          <button onClick={handleSpeak}>Speak</button>
           <button onClick={stop}>Stop</button>
           
         </div>
@@ -235,8 +238,11 @@ function App() {
             {recording ? 'Stop Recording' : 'Start Recording'}
           </button>
         </div>
-        <div className="MediaPlayer">
-          <video playsInline autoPlay width={500} ref={mediaStream}></video>
+        <div className='MediaPlayer'>
+          <video playsInline autoPlay width={300} ref={mediaStream} onCanPlay={() => {
+            setCanPlay(true)
+          }} />
+          {canPlay && <CanvasRender videoRef={mediaStream} />}
         </div>
       </header>
     </div>
