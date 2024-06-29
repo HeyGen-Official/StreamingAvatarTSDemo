@@ -110,6 +110,16 @@ function App() {
     });
   }
 
+  async function handleInterrupt() {
+    if (!initialized || !avatar.current) {
+      setDebug('Avatar API not initialized');
+      return;
+    }
+    await avatar.current?.interrupt({ interruptRequest: { sessionId: data?.sessionId } }).catch((e) => {
+      setDebug(e.message);
+    });
+  }
+
   async function handleChatGPT() {
 
     if (!chatGPTText) {
@@ -228,6 +238,7 @@ function App() {
           <input className="InputField" placeholder='Type something for the avatar to say' value={text} onChange={(v) => setText(v.target.value)} />
           <button onClick={grab}>Start</button>
           <button onClick={handleSpeak}>Speak</button>
+          <button onClick={handleInterrupt}>Interrupt</button>
           <button onClick={stop}>Stop</button>
           
         </div>
