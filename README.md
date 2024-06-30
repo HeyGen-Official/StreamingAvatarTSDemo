@@ -1,11 +1,10 @@
-# Getting Started with Create React App
+# Getting Started with the Streaming Avatar API
 
-This is a sample project and was bootstrapped using [Create React App](https://github.com/facebook/create-react-app)
-Feel free to play around with the existing code and please leave any feedback for the SDK [here](https://github.com/HeyGen-Official/StreamingAvatarSDK/discussions).
+If you are looking to try out the Streaming Avatar API, please use our **NextJS Starter Project**. You can install it here: [https://github.com/HeyGen-Official/StreamingAvatarNextJSDemo]
 
-## Getting Started FAQ
+Both this repo and the NextJS repo make use of our SDK. Leave feedback for the SDK [here](https://github.com/HeyGen-Official/StreamingAvatarSDK/discussions).
 
-### Setting up the demo
+### Setting up the Create-React-App demo
 
 1. Clone this repo
 
@@ -72,6 +71,12 @@ Most of HeyGen's AI Voices can be used with the Streaming API. To find the Voice
 Please note that for voices that support Emotions, such as Christine and Tarquin, you need to pass in the Emotion string in the Voice Setting parameter: [https://docs.heygen.com/reference/new-session-copy#voicesetting]
 
 You can also set the speed at which the Streaming Avatar speaks by passing in a Rate in the Voice Setting.
+
+### Other Features
+
+We have added callbacks for 'Start' and 'Stop' talking, so that you can take some action whenever the Streaming Avatar starts or stops speaking.
+
+We have also added Interruption functionality to the SDK. This enables you to interrupt the Avatar mid-sentence, for example if the user does not want to keep hearing the Avatar's speech.
 
 ### Where can I read more about enterprise-level usage of the Streaming API?
 
