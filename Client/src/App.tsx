@@ -238,7 +238,7 @@ function App() {
           <input className="InputField" placeholder='Type something for the avatar to say' value={text} onChange={(v) => setText(v.target.value)} />
           <button onClick={grab}>Start</button>
           <button onClick={handleSpeak}>Speak</button>
-          <button onClick={handleInterrupt}>Interrupt</button>
+          <button onClick={handleInterrupt}>Interrupt task</button>
           <button onClick={stop}>Stop</button>
           
         </div>
