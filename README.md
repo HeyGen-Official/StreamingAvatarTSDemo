@@ -1,8 +1,10 @@
-# Getting Started with the Streaming Avatar API
+# This repo will be deprecated
 
-If you are looking to try out the Streaming Avatar API, please use our **NextJS Starter Project**. You can install it here: [https://github.com/HeyGen-Official/StreamingAvatarNextJSDemo]
+Due to the deprecation of **Create-React-App**, which this repo uses, we will be updating a new starter project going forward.
 
-Both this repo and the NextJS repo make use of our SDK. Leave feedback for the SDK [here](https://github.com/HeyGen-Official/StreamingAvatarSDK/discussions).
+Please use our **NextJS Starter Project**. You can install it here: [https://github.com/HeyGen-Official/StreamingAvatarNextJSDemo]
+
+Both this repo and the NextJS repo make use of our Streaming Avatar SDK. Leave feedback for the SDK [here](https://github.com/HeyGen-Official/StreamingAvatarSDK/discussions).
 
 ### Setting up the Create-React-App demo
 
